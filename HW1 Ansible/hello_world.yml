@@ -1,0 +1,18 @@
+---
+- name: This is a hello-world example
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  remote_user: hedimoalla
+  become: true
+  vars:
+        http_port: 80
+        max_clients: 200 
+  tasks:
+  - action: ping
+  - name: Install apache2
+    raw: sudo apt-get -y install apache2
+  - name: Start Apache Server
+    raw: sudo service apache2 restart
+  - name: Create Hello World page
+    raw: echo "<h1>Hello World from SpaceFleet</h1>" > /var/www/html/index.html

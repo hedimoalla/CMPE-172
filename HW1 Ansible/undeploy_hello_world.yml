@@ -1,0 +1,10 @@
+---
+  - name: Undeploy Apache Webserver
+    hosts: localhost
+    remote_user: hedimoalla
+    gather_facts: false
+    tasks:
+      - name: uninstall apache
+        raw: sudo apt-get -y purge apache2 apache2-utils apache2.2-bin
+      - name: autoremove
+        raw: sudo apt-get -y autoremove

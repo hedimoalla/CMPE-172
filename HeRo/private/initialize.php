@@ -1,6 +1,9 @@
 <?php
     ob_start(); // Output buffering is turned on
 
+    session_start(); // turn on sessions
+
+
     // Assign file paths to PHP constants
     // __FILE__ returns the current path to this file
     // dirname() returns the path to the parent directory
@@ -19,4 +22,10 @@
     define("WWW_ROOT", $doc_root);
 
     require_once('functions.php');
+    require_once('database.php');
+    require_once('query_functions.php');
+    require_once('validation_functions.php');
+
+    $db = db_connect(); // Connect to the MySQL database
+    $errors = [];
 ?>

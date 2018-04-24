@@ -15,7 +15,7 @@ header {
   height: 40px;
   margin: 0 0 10px 0;
   padding: 0;
-  background: #0055DD;
+  background: red;
   color: white;
 }
 
@@ -86,7 +86,7 @@ table.list tr td {
 table.list tr th {
   border: 1px solid #0055DD;
   background: #0055DD;
-  color: white;
+  color: red;
   text-align: left;
 }
 
@@ -128,3 +128,16 @@ dd {
   margin-bottom: 0;
   padding-left: 1em;
 }
+
+/* Session Messages */
+
+#message {
+  color: #0055DD;
+  background: white;
+  border: 2px solid #0055DD;
+  padding: 1em 15px;
+  margin: 1em 30px;
+  width: 890px;
+}
+
+
